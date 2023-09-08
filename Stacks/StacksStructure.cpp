@@ -11,6 +11,7 @@ struct stack
     bool push(int x);
     int pop();
     bool isEmpty();
+    int peek();
 };
 
 bool stack::push(int x){
@@ -40,13 +41,25 @@ int stack::pop(){
 }
 
 bool stack::isEmpty(){
-    if(top==-1){
+    if(top<0){
         cout<<"Empty"<<endl;
         return false;
     }
     else{
         cout<<"Not Empty"<<endl;
         return true;
+    }
+}
+
+int stack::peek(){
+    if(top<0){
+        cout<<"Stack Underflow"<<endl;
+        return -1;
+    }
+    else{
+        int x=arr[top];
+        cout<<x<<endl;
+        return x;
     }
 }
 

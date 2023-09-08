@@ -1,22 +1,15 @@
 #include<iostream>
 using namespace std;
 
+//Naive Solution
 int eqmIndex(int arr[],int n){
-    int lowSum=arr[0],highSum=arr[n];
-    int k=n-2,l=1;
-    for(int i=0;i<n;i++){
-        if(lowSum>highSum){
-            highSum+=arr[k];
-            k--;
-        }
-        else if(lowSum<highSum){
-            lowSum+=arr[l];
-            l++;
-        }
-        else
-            return k;
+    for (int i = 0; i < n; i++)
+    {
+       for(int i=0;i<n;i++){
+        
+       }
     }
-    return -1;
+    
 }
 
 int main(){
