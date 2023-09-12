@@ -29,13 +29,13 @@ int main(){
     Node *num2 = new Node(30);
     Node *num3 = new Node(40);
     Node *num4 = new Node(50);
-    //Node *num5 = new Node(60);
+    Node *num5 = new Node(60);
 
     head->next=num1;
     num1->next=num2;
     num2->next=num3;
     num3->next=num4;
-   // num4->next=num5;
+    num4->next=num5;
 
    cout<<"Answer is : "<<middleLinked(head)<<endl;
 

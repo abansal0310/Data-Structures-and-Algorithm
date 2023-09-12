@@ -19,7 +19,7 @@ void conversion(string s){
     int str = s.length();
     string ns;
 
-    for(int i=0;i<str;i++){
+    for(int i=0;i<str;i++){ 
     }
 
 }

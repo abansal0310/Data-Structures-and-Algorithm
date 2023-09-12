@@ -16,11 +16,11 @@ void sortInsert(Node *head, int data){
     Node *curr=head;
     Node *temp=new Node(data);
 
-    while(curr!=NULL && curr->data<=data){
+    while(curr!=NULL && curr->next->data<=data){
         curr=curr->next;
     }
-    temp->next = curr;
-    curr->next = temp;
+    temp->next = curr->next;
+    curr->next= temp;
 
     Node *ptr = head;
 
