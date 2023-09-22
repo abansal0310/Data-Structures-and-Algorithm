@@ -13,6 +13,10 @@ int value(char x){
         return -1;
 }
 
+int isOperator(char ch){
+    return(ch=='+'||ch=='-'||ch=='/'||ch=='*'||ch=='^');
+}
+
 void conversion(string s){
     stack<char>ans;
 
@@ -20,6 +24,7 @@ void conversion(string s){
     string ns;
 
     for(int i=0;i<str;i++){ 
+
     }
 
 }
