@@ -18,9 +18,9 @@ int evaluation(char *s){
 
             switch(s[i]){
                 case '+' : ans.push(val1+val2); break;
-                case '-' : ans.push(val2-val1); break;
+                case '-' : ans.push(val1-val2); break;
                 case '*' : ans.push(val1*val2); break;
-                case '/' : ans.push(val2/val1); break;
+                case '/' : ans.push(val1/val2); break;
             }
         }
     }
