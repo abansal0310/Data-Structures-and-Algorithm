@@ -4,19 +4,18 @@ using namespace std;
 struct Node{
     Node *next;
     int data;
-    Node(int x){
+    Node(int x=0){
         data=x;
         next=NULL;
     }
 };
 
-void display(Node *head){
+void displayy(Node *head){
     Node *temp = head;
-    while(temp != head){
+    do{
         cout<<temp->data<<" ";
         temp=temp->next;
-    }
-    cout<<endl;
+    }while(temp != head);
 }
 
 int main(){
@@ -30,5 +29,5 @@ int main(){
     num2->next = num3;
     num3->next = head;
 
-    display(head);
+    displayy(head);
 }

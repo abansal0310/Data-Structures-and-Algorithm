@@ -14,13 +14,13 @@ struct Node{
 void reverseList(Node *head){
     Node *prev=nullptr;
     Node *curr = head;
-    Node *Next=nullptr;
+    Node *ptr=nullptr;
 
     while(curr != nullptr){
-        Next=curr->next;
+        ptr=curr->next;
         curr->next = prev;
         prev=curr;
-        curr=Next;
+        curr=ptr;
     }
     head = prev;
 

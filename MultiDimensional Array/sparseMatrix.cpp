@@ -45,12 +45,23 @@ struct matrix{
             cout<<endl;
         }
     }
+
+    matrix operator+(matrix &s){
+        int i,j,k;
+        if(row != s.row || column != s.column)
+            return ;
+        matrix *sum = new matrix(row,column,ele+s.ele);
+        i=j=k=0;
+        while(i<ele && j<s.ele){
+            
+        }
+
+    }
 };
 
 
 
 int main(){
-    //matrix m1(5,5,2);
     matrix m2(5,5,5);
     m2.read();
     m2.display();

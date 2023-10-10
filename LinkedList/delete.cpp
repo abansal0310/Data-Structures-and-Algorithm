@@ -75,3 +75,4 @@ int main(){
 
     deleteNode(head,1,6);
 }
+
