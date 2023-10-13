@@ -33,6 +33,7 @@ void push(Node *(&head),int x){
     ptr->next=temp;
 }
 
+//Not Sorted
 void pairSum(Node *head, int sum){
 
     for(Node *ptr = head; ptr!=NULL;ptr=ptr->next){
@@ -43,6 +44,12 @@ void pairSum(Node *head, int sum){
         }
     }
 }
+
+//Sorted
+void SpairSum(Node *head, int sum){
+    
+}
+
 
 int main(){
     Node *head = nullptr;
