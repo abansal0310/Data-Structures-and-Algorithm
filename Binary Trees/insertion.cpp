@@ -1,53 +1,63 @@
-#include<iostream>
+#pragma region
+
+#include <iostream>
 using namespace std;
 
-struct Node{
-    Node *left,*right;
+struct Tree
+{
+    Tree *left, *right;
     int data;
-    Node(int x){
-        data=x;
-        left=right=NULL;
+
+    Tree(int x)
+    {
+        data = x;
+        left = right = NULL;
     }
 };
 
-void inOrder(Node *root){
-    if(root==NULL){
-        cout<<"ERROR"<<endl;
+void insert(Tree *&root, int x)
+{
+
+    Tree *temp = new Tree(x);
+    // Tree * &ptr = root;
+    if (root == NULL)
+    {
+        root = temp;
         return;
     }
-    inOrder(root->left);
-    cout<<root->data<<" ";
-    inOrder(root->right);
+
+    if (root->data > x)
+    {
+        insert(root->right, x);
+    }
+
+    else if (root->data < x)
+    {
+        insert(root->left, x);
+    }
 }
 
-void insert(Node *(&root),int x){
-    Node *temp = new Node(x);
-    Node *ptr = root;
-    if(root == NULL){
-        root=temp;
+void show(Tree *root)
+{
+    Tree *ptr = root;
+    if (ptr == NULL)
+    {
         return;
     }
-    
-    while(ptr != NULL){
-        if(ptr->data>x){
-            ptr=ptr->left;
-        }
-        else if(ptr->data<x){
-            ptr=ptr->right;
-        }
-    }
-    ptr=temp;
+    show(ptr->left);
+    cout << ptr->data << " ";
+    show(ptr->right);
 }
 
-int main(){
-    Node *root = nullptr;
-    insert(root,50);
-    insert(root, 30);
+int main()
+{
+    Tree *root = NULL;
+    insert(root, 10);
     insert(root, 20);
+    insert(root, 5);
     insert(root, 40);
-    insert(root, 70);
-    insert(root, 60);
-    insert(root, 80);
 
-    inOrder(root);
+    show(root);
 }
+
+#pragma endregion

@@ -26,8 +26,8 @@ void Kprint(BST *root, int k)
         cout << root->data << " ";
     }
 
-    Kprint(root->left, --k);
-    Kprint(root->right, --k);
+    Kprint(root->left, k - 1);
+    Kprint(root->right, k - 1);
 }
 
 int main()
